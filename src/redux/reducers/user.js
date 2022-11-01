@@ -6,7 +6,6 @@ const INITIAL_STATE = {
 };
 
 const user = (state = INITIAL_STATE, { type, payload }) => {
-  console.log(payload);
   switch (type) {
   case ADD_USER:
     return {
