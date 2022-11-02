@@ -66,13 +66,8 @@ class WalletForm extends Component {
           </select>
           <button
             type="button"
-            key={ `answer-${i}` }
-            data-testid={ `wrong-answer-${i}` }
-            className={ checkAnswer ? 'incorrect-answer' : undefined }
-            onClick={ () => this.procedCheckAnswer(currentQuestion, isCorrect) }
-            disabled={ !!checkAnswer }
           >
-            {value}
+            Adicionar despesa
           </button>
         </form>
       </div>

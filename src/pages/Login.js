@@ -19,7 +19,6 @@ class Login extends React.Component {
     const regex = /\S+@\S+\.\S+/;
     const verifyEmail = regex.test(email);
     const pswrMinLen = 6;
-    console.log(password);
     const verifyPassword = password.length >= pswrMinLen;
     this.setState({ isDisabled: !(verifyEmail && verifyPassword) });
   };
