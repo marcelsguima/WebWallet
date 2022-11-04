@@ -1,9 +1,10 @@
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
-import { BALANCE, SEND_FINANCE } from '../actions/index';
+import { BALANCE, SEND_FINANCE, UPDATE_TABLE } from '../actions/index';
 
 const INITIAL_STATE = {
   balance: 0,
   currencies: [],
+  expenses: [],
 };
 
 const wallet = (state = INITIAL_STATE, { type, payload }) => {
@@ -18,6 +19,12 @@ const wallet = (state = INITIAL_STATE, { type, payload }) => {
       ...state,
       currencies: payload,
     };
+  case UPDATE_TABLE:
+    return {
+      ...state,
+      expenses: [...state.expenses, payload],
+    };
+
   default:
     return state;
   }
