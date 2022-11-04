@@ -6,7 +6,7 @@ export const REQUEST_FINANCE = 'REQUEST_FINANCE';
 export const SEND_FINANCE = 'SEND_FINANCE';
 export const SEND_EXPENSE = 'SEND_EXPENSE';
 export const UPDATE_TABLE = 'UPDATE_TABLE';
-
+export const DELETE_EXP = 'DELETE_EXP';
 export const addUser = (payload) => ({
   type: ADD_USER,
   payload,
@@ -35,6 +35,11 @@ export const sendExpense = (payload) => ({
 export const upTable = (data, state) => ({
   type: UPDATE_TABLE,
   payload: { ...state, exchangeRates: data },
+});
+
+export const deleteExp = (id) => ({
+  type: DELETE_EXP,
+  payload: id,
 });
 
 export const sendFinanceTable = () => async (dispatch) => {
