@@ -38,7 +38,7 @@ class Login extends React.Component {
         <p>Login Page</p>
 
         <form>
-          <label htmlFor="email">
+          <label htmlFor="mailInput">
             Email:
             <input
               id="mailInput"
@@ -49,7 +49,7 @@ class Login extends React.Component {
               onChange={ this.onInputChange }
             />
           </label>
-          <label htmlFor="passwordField">
+          <label htmlFor="pswdInput">
             Senha:
             <input
               id="pswdInput"
